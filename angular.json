@@ -7,7 +7,7 @@
       "root": "apps/admin/",
       "sourceRoot": "apps/admin/src",
       "projectType": "application",
-      "prefix": "colmena",
+      "prefix": "app",
       "schematics": {},
       "architect": {
         "build": {
@@ -189,7 +189,7 @@
       "root": "libs/core",
       "sourceRoot": "libs/core/src",
       "projectType": "library",
-      "prefix": "colmena",
+      "prefix": "core",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",

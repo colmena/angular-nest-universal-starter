@@ -1,0 +1,16 @@
+.items {
+  text-align: center;
+  margin: 40px;
+  min-height: 300px;
+}
+
+.item {
+  width: 33%;
+  float: left;
+}
+
+.data-block {
+  margin: 40px;
+  width: 40%;
+  float: left;
+}

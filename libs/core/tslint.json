@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "colmena",
+      "core",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "colmena",
+      "core",
       "kebab-case"
     ]
   }
