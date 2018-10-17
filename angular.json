@@ -140,6 +140,7 @@
         "build": {
           "builder": "@nrwl/builders:node-build",
           "options": {
+            "externalDependencies": "none",
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json"

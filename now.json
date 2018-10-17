@@ -1,0 +1,10 @@
+{
+  "name": "angular-nest-universal",
+  "alias": "angular-nest-universal",
+  "type": "docker",
+  "public": true,
+  "files": [
+    "Dockerfile",
+    "dist"
+  ]
+}
