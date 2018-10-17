@@ -1,7 +1,7 @@
-FROM node:10-alpine
+FROM gcr.io/distroless/nodejs
 
 WORKDIR /opt/app
 
 COPY dist /opt/app/dist
 
-CMD [ "node", "/opt/app/dist/apps/api/main" ]
+CMD [ "/opt/app/dist/apps/api/main.js" ]
