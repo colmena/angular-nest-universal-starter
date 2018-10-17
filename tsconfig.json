@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@colmena/core": [
+        "libs/core/src/index.ts"
+      ]
     }
   },
   "exclude": [

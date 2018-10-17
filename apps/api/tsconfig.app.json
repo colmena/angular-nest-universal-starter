@@ -1,8 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
     "outDir": "../../dist/out-tsc/apps/api",
-    "types": []
+    "types": [],
+    "baseUrl": "../../"
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]
