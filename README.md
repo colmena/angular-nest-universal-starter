@@ -57,8 +57,7 @@ The project is configured to deploy builds to [now.sh](https://zeit.co/now). We 
 
 `now` is not installed as dependency as it's rather large, people who use it generally have it installed globally.
 
-The docker image name is defined in `package.json`, you probably want to change that from `colmena/angular-nest-universal` to something else.
-
+The `now` team name used for the deployment is defined in the `deploy` script in `package.json`, you should update it to your team or username. The `now` alias and deployment name are defined in `now.json`.
 
 ```
 # Make sure to build the app
