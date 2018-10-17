@@ -1,20 +1,18 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- **/
+import { enableProdMode } from '@angular/core';
+import { NestFactory } from '@nestjs/core';
+import { Logger } from '@nestjs/common';
+import { ServerAppModule } from './app/server-app.module';
 
-import * as express from 'express';
+const PORT = process.env.PORT || 8080;
+const HOST = process.env.HOST || '0.0.0.0';
 
-const app = express();
+enableProdMode();
 
-app.get('/', (req, res) => {
-  res.send(`Welcome to api!`);
-});
+async function bootstrap() {
+  const app = await NestFactory.create(ServerAppModule);
+  await app.listen(PORT, HOST);
+}
 
-const port = 3333;
-app.listen(port, (err) => {
-  if (err) {
-    console.error(err);
-  }
-  console.log(`Listening at http://localhost:${port}`);
-});
+bootstrap()
+  .then(() => Logger.log(`Server listening on http://${HOST}:${PORT}`))
+  .catch(err => console.error(err));
