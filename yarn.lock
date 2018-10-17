@@ -183,6 +183,13 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/http@^6.1.10":
+  version "6.1.10"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.10.tgz#91239b27990b992cdb312056d3f11cc804bfeaf4"
+  integrity sha512-LDsSqyexh8fj23y+G2oSGLWSZVhbxBBo2ehYHnRgH/jlp0pmZVLRaGgUMNSCVtZc1rxLzpEjZjtw+P+qlutAtw==
+  dependencies:
+    tslib "^1.9.0"
+
 "@angular/language-service@^6.1.0":
   version "6.1.10"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-6.1.10.tgz#9f87b740befca8bf9a5fb499446425519389f52f"
@@ -201,6 +208,15 @@
   integrity sha512-CB7pqMwtgb7KjdHDAJlsXcs0rrU+2xQVaoOaqEfJtUrKhtGMLaZh8Qoic5l92SoGattkOw7SYarAOsWlAsVfvw==
   dependencies:
     tslib "^1.9.0"
+
+"@angular/platform-server@^6.1.0":
+  version "6.1.10"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-6.1.10.tgz#8d8ee2a4899fa840985191c8f223fe0dbf3c9a72"
+  integrity sha512-OKcbDJOCYrk+z5BaTbAsunLazlvFZZqOtYKU8zSCVuTGnGRINchO2RxHezS2+npzY1oO1zl1AA47RR59Nxutww==
+  dependencies:
+    domino "^2.0.1"
+    tslib "^1.9.0"
+    xhr2 "^0.1.4"
 
 "@angular/router@^6.1.0":
   version "6.1.10"
@@ -326,6 +342,11 @@
     rxjs "~6.2.0"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
+
+"@nguniversal/module-map-ngfactory-loader@^6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-6.1.0.tgz#49eb65ed4dc3a3273c920b905e0925e0ed2fbcb8"
+  integrity sha512-frEJmD1sUje8zKiY3ClioWGMnp9qK/SSLITTQHpKjhqatBsOPxOrJ60vu4Dv0G0zcqc+SesxuOjQ9svCYa5FVA==
 
 "@nrwl/builders@6.4.0":
   version "6.4.0"
@@ -2661,6 +2682,11 @@ domhandler@2.1:
   integrity sha1-0mRvXlf2w7qxHPbLBdPArPdBJZQ=
   dependencies:
     domelementtype "1"
+
+domino@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/domino/-/domino-2.1.0.tgz#653ba7d331441113b42e40ba05f24253ec86e02e"
+  integrity sha512-xINSODvrnuQcm3eXJN4IkBR+JxqLrJN8Ge4fd00y1b7HsY0A4huKN5BflSS/oo8quBWmocTfWdFvrw2H8TjGqQ==
 
 domutils@1.1:
   version "1.1.6"
@@ -8954,6 +8980,11 @@ ws@~3.3.1:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
+
+xhr2@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/xhr2/-/xhr2-0.1.4.tgz#7f87658847716db5026323812f818cadab387a5f"
+  integrity sha1-f4dliEdxbbUCYyOBL4GMras4el8=
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
