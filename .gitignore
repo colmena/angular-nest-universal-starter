@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# We use yarn, so let's leave package-lock.json out
+.package-lock.json
+
 # compiled output
 /dist
 /tmp

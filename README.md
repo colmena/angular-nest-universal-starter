@@ -1,44 +1,71 @@
-# Colmena
+# angular-nest-universal-starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
+A simple starter repo based on [Nrwl Nx](https://github.com/nrwl/nx).
 
-## Nrwl Extensions for Angular (Nx)
+It features a API built with Nest and an Angular app. It includes a Docker configuration that can be deployed to [now.sh](https://zeit.co/now).
 
-<a href="https://nrwl.io/nx"><img src="https://preview.ibb.co/mW6sdw/nx_logo.png"></a>
+## Installation
 
-Nx is an open source toolkit for enterprise Angular applications.
+```
+git clone https://github.com/colmena/angular-nest-universal-starter my-app
+cd my-app
+# This project uses yarn, npm will most likely work just as fine :)
+yarn
+```
 
-Nx is designed to help you create and build enterprise grade Angular applications. It provides an opinionated approach to application project structure and patterns.
+## Running
 
-## Quick Start & Documentation
+```
+yarn dev:api
+yarn dev:admin
+```
 
-[Watch a 5-minute video on how to get started with Nx.](http://nrwl.io/nx)
+## Building
 
-## Generate your first application
+```
+# Build the whole stack
+yarn build
 
-Run `ng generate app myapp` to generate an application. When using Nx, you can create multiple applications and libraries in the same CLI workspace. Read more [here](http://nrwl.io/nx).
+# Build an individual app
+yarn api:build
+yarn admin:build 
+```
 
-## Development server
+## Docker
 
-Run `ng serve --project=myapp` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+There is a Docker configuration (defined in `Dockerfile.build`) that builds the app and creates a container that contains the minimal assets to run.
 
-## Code scaffolding
+The docker image name is defined in `package.json`, you probably want to change that from `colmena/angular-nest-universal` to something else.
 
-Run `ng generate component component-name --project=myapp` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+# Build and run the docker image
+yarn docker
 
-## Build
+# Build the docker image
+yarn docker:build
 
-Run `ng build --project=myapp` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Run the docker image
+yarn docker:run
 
-## Running unit tests
+# Push the docker image
+yarn docker:push
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deployment
 
-## Running end-to-end tests
+The project is configured to deploy builds to [now.sh](https://zeit.co/now). We don't build the project on now.sh, instead we deploy the assets that are built somewhere else, for instance a CI process.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+`now` is not installed as dependency as it's rather large, people who use it generally have it installed globally.
 
-## Further help
+The docker image name is defined in `package.json`, you probably want to change that from `colmena/angular-nest-universal` to something else.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+```
+# Make sure to build the app
+yarn build
+
+# Deploy to now
+yarn deploy
+```
+
+## MIT Licensed
