@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'
-import { stack } from '@colmena/core'
+import { stack, VERSION } from '@colmena/core'
 import { Subscription } from 'rxjs'
 import { AppService } from '../../../app.service'
 
@@ -9,15 +9,19 @@ import { AppService } from '../../../app.service'
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  public stack: any[] = stack
-  public status = {}
+  public client = {
+    version: VERSION,
+    stack: stack,
+  }
+  public server = {}
+
   private sub: Subscription
 
   constructor(private service: AppService) {}
 
   ngOnInit() {
     this.sub = this.service.getStatus()
-      .subscribe(status => this.status = status)
+      .subscribe(status => this.server = status)
   }
 
   ngOnDestroy() {

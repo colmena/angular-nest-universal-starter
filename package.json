@@ -1,11 +1,17 @@
 {
-  "name": "colmena",
+  "name": "@colmena/angular-nest-universal",
+  "description": "NestJS API with Angular Universal in a Nx Workspace",
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/colmena/angular-nest-universal-starter.git"
+  },
+  "homepage": "https://angular-nest-universal.now.sh/",
   "scripts": {
     "dev:api": "ng serve api",
     "dev:admin": "ng serve admin",
-    "build": "yarn build:admin && yarn build:admin:universal && yarn build:api",
+    "build": "npm-run-all build:admin build:admin:universal build:api",
     "build:api": "ng build api --prod",
     "build:admin": "ng build admin --prod",
     "build:admin:watch": "ng build admin --watch",
@@ -20,6 +26,7 @@
     "docker:push": "docker push colmena/angular-nest-universal:latest",
     "deploy": "now --team colmena && now alias",
     "start": "node dist/apps/api/main",
+    "postinstall": "ts-node tools/generate-version",
     "test": "ng test",
     "lint": "./node_modules/.bin/nx lint && ng lint",
     "e2e": "ng e2e",
@@ -83,6 +90,7 @@
     "@types/jest": "^23.0.0",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "git-describe": "latest",
     "jasmine-core": "~2.99.1",
     "jasmine-marbles": "0.3.1",
     "jasmine-spec-reporter": "~4.2.1",

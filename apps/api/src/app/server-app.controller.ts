@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common'
-import { stack } from '@colmena/core'
+import { stack, VERSION } from '@colmena/core'
 
 @Controller()
 export class ServerAppController {
@@ -8,11 +8,14 @@ export class ServerAppController {
   status(): any {
     const { uptime, arch, version, platform } = process
     return {
-      uptime: uptime(),
-      arch,
-      version,
-      platform,
+      version: VERSION,
       stack,
+      server: {
+        uptime: uptime(),
+        arch,
+        version,
+        platform,
+      },
     }
   }
 }
