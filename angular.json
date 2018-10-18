@@ -99,6 +99,16 @@
             "outputPath": "dist/apps/admin-server",
             "main": "apps/admin/src/main.server.ts",
             "tsConfig": "apps/admin/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/admin/src/environments/environment.ts",
+                  "with": "apps/admin/src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }

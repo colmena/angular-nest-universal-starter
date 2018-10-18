@@ -15,7 +15,7 @@
     "build:api": "ng build api --prod",
     "build:admin": "ng build admin --prod",
     "build:admin:watch": "ng build admin --watch",
-    "build:admin:universal": "ng run admin:server",
+    "build:admin:universal": "ng run admin:server --configuration=production",
     "build:admin:universal:watch": "ng run admin:server --watch",
     "build:watch": "npm-run-all -p build:admin:watch build:admin:universal:watch",
     "docker": "npm run docker:build && npm run docker:run",
