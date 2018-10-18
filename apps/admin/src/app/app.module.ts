@@ -18,7 +18,7 @@ const routes: Routes = [
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { initialNavigation: true }),
   ],
   providers: [],
   bootstrap: [AppComponent],
