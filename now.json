@@ -2,5 +2,11 @@
   "name": "angular-nest-universal",
   "alias": "angular-nest-universal",
   "type": "npm",
-  "public": true
+  "public": true,
+  "scale": {
+    "sfo1": {
+      "min": 1,
+      "max": 1
+    }
+  }
 }
