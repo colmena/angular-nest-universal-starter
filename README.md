@@ -31,6 +31,26 @@ yarn api:build
 yarn admin:build 
 ```
 
+
+## Building in watch mode
+
+You can rebuild the admin in watch mode. This is a great way Angular Universal to get almost instant compilation of server side rendered code.
+
+First, you should start the build process of the admin in watch mode:
+
+```markdown
+# Build the admin app in watch mode
+yarn build:watch
+```
+
+Leave that process running, and start the api in a second terminal, in dev mode.
+
+```markdown
+yarn dev:api
+```
+
+This will picks up the changes in the `dist` folder and restarts the server. When you now refresh the page, you will get the new server side rendered output.
+
 ## Docker
 
 There is a Docker configuration (defined in `Dockerfile.build`) that builds the app and creates a container that contains the minimal assets to run.
